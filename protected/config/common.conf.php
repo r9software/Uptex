@@ -5,7 +5,8 @@
  * Access via Singleton, eg. Doo::conf()->BASE_PATH;
  */
 error_reporting(E_ALL | E_STRICT);
-date_default_timezone_set('Asia/Kuala_Lumpur');
+date_default_timezone_set('America/Mexico_city');
+header('Content-Type: text/html; charset=ISO-8859-1');
 
 /**
  * for benchmark purpose, call Doo::benchmark() for time used.
@@ -14,7 +15,7 @@ date_default_timezone_set('Asia/Kuala_Lumpur');
 
 
 //For framework use. Must be defined. Use full absolute paths and end them with '/'      eg. /var/www/project/
-$config['SITE_PATH'] = realpath('..').'/app/';
+$config['SITE_PATH'] = realpath('..').'/uptex/';
 //$config['PROTECTED_FOLDER'] = 'protected/';
 $config['BASE_PATH'] = realpath('..').'/dooframework/';
 

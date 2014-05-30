@@ -8,9 +8,7 @@
 class MainController extends DooController{
 
     public function index(){
-		//Just replace these
-		Doo::loadCore('app/DooSiteMagic');
-		DooSiteMagic::displayHome();
+		$this-> renderc("index");
     }
 	
 	public function allurl(){	
