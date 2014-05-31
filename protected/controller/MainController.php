@@ -10,6 +10,41 @@ class MainController extends DooController{
     public function index(){
 		$this-> renderc("index");
     }
+     public function home(){
+		$this-> renderc("saup/home");
+    }
+    
+     public function green(){
+		$this-> renderc("saup/green");
+    }
+      public function yellow(){
+		$this-> renderc("saup/yellow");
+    }
+     public function blue(){
+		$this-> renderc("saup/blue");
+    }
+    
+     public function black(){
+		$this-> renderc("saup/black");
+    }
+    
+     public function purple(){
+		$this-> renderc("saup/purple");
+    }
+    
+     public function red(){
+		$this-> renderc("saup/red");
+    }
+    
+     public function cafe(){
+		$this-> renderc("saup/cafe");
+    }
+    
+     public function white(){
+		$this-> renderc("saup/white");
+    }
+	
+	
 	
 	public function allurl(){	
 		Doo::loadCore('app/DooSiteMagic');

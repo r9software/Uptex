@@ -18,6 +18,7 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 $config['SITE_PATH'] = realpath('..').'/uptex/';
 //$config['PROTECTED_FOLDER'] = 'protected/';
 $config['BASE_PATH'] = realpath('..').'/dooframework/';
+$config['NOMBRE'] = 'UPTex';
 
 //for production mode use 'prod'
 $config['APP_MODE'] = 'dev';

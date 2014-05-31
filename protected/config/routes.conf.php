@@ -55,6 +55,14 @@
  */
  
 $route['*']['/'] = array('MainController', 'index');
+$route['*']['/home'] = array('MainController', 'home');
+$route['*']['/green'] = array('MainController', 'green');
+$route['*']['/yellow'] = array('MainController', 'yellow');
+$route['*']['/black'] = array('MainController', 'black');
+$route['*']['/white'] = array('MainController', 'white');
+$route['*']['/cafe'] = array('MainController', 'cafe');
+$route['*']['/purple'] = array('MainController', 'purple');
+$route['*']['/red'] = array('MainController', 'red');
 $route['*']['/error'] = array('ErrorController', 'index');
 
 

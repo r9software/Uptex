@@ -8,9 +8,9 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="UPTex Admin Panel" />
-	<meta name="author" content="" />
+	<meta name="author" content=""/>
 	
-	<title>UPTex  Login</title>
+	<title><?php echo Doo::conf()->NOMBRE; ?>  Login</title>
 	
 
         <link rel="stylesheet" href="<?php echo Doo::conf()->APP_URL; ?>global/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
@@ -43,7 +43,7 @@
 		<div class="login-content">
 			
 			<a href="#" class="logo">
-				<img src="<?php echo Doo::conf()->APP_URL; ?>global/images/logo@2x.png" alt="" width="100" />
+				<img src="<?php echo Doo::conf()->APP_URL; ?>global/images/logo@2x.png" alt="" width="200" />
 			</a>
 			
 			<p class="description">Empieza a usar el sistema iniciando sesi&oacute;n</p>
