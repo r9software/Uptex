@@ -1647,7 +1647,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #949494;
+  color: #000000;
   background-color: #3f3f3f;
 }
 input,
@@ -2919,8 +2919,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #3f3f3f;
-  background-color: #d3002c;
-  border-color: #d3002c;
+  background-color: #008631;
+  border-color: #008631;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2928,8 +2928,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #3f3f3f;
-  background-color: #008631;
-  border-color: #008631;
+  background-color: #d3002c;
+  border-color: #d3002c;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -6519,7 +6519,7 @@ hr + .mail-env {
   padding-bottom: 5px;
 }
 .login-page .login-form .form-group .btn-login {
-  border: 1px solid #d3002c;
+  border: 1px solid #008631;
   text-align: left;
   padding: 15px 20px;
   font-size: 14px;

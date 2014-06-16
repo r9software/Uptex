@@ -31,8 +31,8 @@ $dbmap['Ingredient']['has_many']['Food'] = array('foreign_key'=>'ingredient_id',
  * To set collation and charset of the db connection, use the key 'collate' and 'charset'
  * array('localhost', 'database', 'root', '1234', 'mysql', true, 'collate'=>'utf8_unicode_ci', 'charset'=>'utf8'); 
  */
+$dbmap= array();
+$dbconfig['dev'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
+$dbconfig['prod'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
 
-/* $dbconfig['dev'] = array('localhost', 'database', 'root', '1234', 'mysql', true);
- * $dbconfig['prod'] = array('localhost', 'database', 'root', '1234', 'mysql', true);
- */
 ?>

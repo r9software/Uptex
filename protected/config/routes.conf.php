@@ -55,6 +55,7 @@
  */
  
 $route['*']['/'] = array('MainController', 'index');
+
 $route['*']['/home'] = array('MainController', 'home');
 $route['*']['/green'] = array('MainController', 'green');
 $route['*']['/yellow'] = array('MainController', 'yellow');
