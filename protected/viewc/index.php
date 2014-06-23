@@ -34,6 +34,35 @@
 	
 	
 </head>
+
+<script>
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+
+var opts = {
+	"closeButton": true,
+	"debug": false,
+	"positionClass": "toast-top-full-width",
+	"onclick": null,
+	"showDuration": "3000",
+	"hideDuration": "1000",
+	"timeOut": "5000",
+	"extendedTimeOut": "1000",
+	"showEasing": "swing",
+	"hideEasing": "linear",
+	"showMethod": "fadeIn",
+	"hideMethod": "fadeOut"
+};
+<?php if(isset($_GET["error"])&& strcmp($_GET["error"],"login")==0){ ?>
+toastr.warning("Parece que el usuario y la contrase&ntilde;a no coinciden.","Error ", opts);
+<?php } ?>
+  <?php if(isset($_GET["error"])&& strcmp($_GET["error"],"sinperfil")==0){ ?>
+toastr.warning("Lamentablemente tu perfil esta deshabilitado, o no tienes un perfil asignado.","Error ", opts);
+<?php } ?>  
+});
+</script>
+
 <body class="page-body login-page is-lockscreen login-form-fall boxed-layout" data-url="http://neon.dev">
 
 <div class="login-container">
@@ -61,7 +90,7 @@
 		
 		<div class="login-content">
 			
-			<form method="post" role="form" id="form_lockscreen">
+			 <form method="post" action="<?php echo Doo::conf()->APP_URL; ?>login/">
 				
 				<div class="form-group lockscreen-input">
 					
@@ -78,7 +107,7 @@
 					
 				</div>
 				
-				
+                           
 				<div class="form-group">
 					
 					<div class="input-group">
@@ -86,7 +115,7 @@
 							<i class="entypo-user"></i>
 						</div>
 						
-						<input type="text" class="form-control" name="user" id="username" placeholder="Usuario" autocomplete="off" />
+						<input type="text" class="form-control" name="usuario" data-validate="email" id="username" placeholder="Usuario" autocomplete="off" />
 					</div>
 					
 				</div>
@@ -109,6 +138,7 @@
 						Iniciar
 					</button>
 				</div>
+                            </form>
 				
 				<!-- Implemented in v1.1.4 -->				
                                 <!-- 
@@ -171,6 +201,7 @@
 	<script src="<?php echo Doo::conf()->APP_URL; ?>global/js/neon-login.js"></script>
 	<script src="<?php echo Doo::conf()->APP_URL; ?>global/js/neon-custom.js"></script>
 	<script src="<?php echo Doo::conf()->APP_URL; ?>global/js/neon-demo.js"></script>
-
+        <script src="<?php echo Doo::conf()->APP_URL; ?>global/js/toastr.js"></script>
+        
 </body>
 </html>

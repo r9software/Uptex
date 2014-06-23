@@ -55,8 +55,15 @@
  */
  
 $route['*']['/'] = array('MainController', 'index');
+$route['post']['/login'] = array('LoginController', 'validarLogin');
+//administradores
+$route['*']['/administrativo/home'] = array('administrativo/AdministrativoController', 'home');
 
-$route['*']['/home'] = array('MainController', 'home');
+//maestro
+$route['*']['/maestro/home'] = array('maestro/MaestroController', 'home');
+//alumnos
+$route['*']['/alumno/home'] = array('alumno/AlumnoController', 'home');
+
 $route['*']['/green'] = array('MainController', 'green');
 $route['*']['/yellow'] = array('MainController', 'yellow');
 $route['*']['/black'] = array('MainController', 'black');
