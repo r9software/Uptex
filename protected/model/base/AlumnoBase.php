@@ -74,7 +74,7 @@ class AlumnoBase extends DooModel{
     public $preparatoria;
 
     /**
-     * @var varchar Max length is 45.
+     * @var int Max length is 45.
      */
     public $genero;
 
@@ -183,6 +183,7 @@ class AlumnoBase extends DooModel{
                 ),
 
                 'genero' => array(
+                        array( 'integer' ),
                         array( 'maxlength', 45 ),
                         array( 'optional' ),
                 ),

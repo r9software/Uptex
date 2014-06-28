@@ -6,6 +6,7 @@
  
 
 //Food relationship
+ * 
 $dbmap['Food']['belongs_to']['FoodType'] = array('foreign_key'=>'id');
 $dbmap['Food']['has_many']['Article'] = array('foreign_key'=>'food_id');
 $dbmap['Food']['has_one']['Recipe'] = array('foreign_key'=>'food_id');
@@ -32,6 +33,12 @@ $dbmap['Ingredient']['has_many']['Food'] = array('foreign_key'=>'ingredient_id',
  * array('localhost', 'database', 'root', '1234', 'mysql', true, 'collate'=>'utf8_unicode_ci', 'charset'=>'utf8'); 
  */
 $dbmap= array();
+$dbmap['Alumno']['belongs_to']['Usuario'] = array('foreign_key'=>'idusuario');
+$dbmap['Usuario']['has_many']['Alumno'] = array('foreign_key'=>'idusuario');
+$dbmap['Periodo']['has_many']['Fecha'] = array('foreign_key'=>'idperiodo');
+$dbmap['Fecha']['belongs_to']['Periodo'] = array('foreign_key'=>'idperiodo');
+
+
 $dbconfig['dev'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
 $dbconfig['prod'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
 

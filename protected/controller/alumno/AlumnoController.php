@@ -12,6 +12,14 @@ class AlumnoController extends DooController {
         //Cargamos la posible sesión existente	
         $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
         if ($session->get('idusuario') != null) {
+            //informacion del alumno
+            Doo::loadModel('Usuario');
+            Doo::loadModel('Alumno');
+            $usuario= new Usuario();
+            $usuario->idusuario=$session->get('idusuario');
+            $usuario = $this->db()->relate($usuario,'Alumno');
+            //informacion general de fechas 
+            $this->data["usuario"]=$usuario;
             //documentos de profesores, o para alumnos
             //horario
             //grupos
@@ -21,7 +29,7 @@ class AlumnoController extends DooController {
             //asistencias del semestre
             //carrera
             //Ya existe una sesión activa, no pediremos que se logue
-            $this->renderc("saup/administrativo/home");
+            $this->renderc("saup/alumno/home",$this->data);
         } else {
             $session->destroy();
             //No existe sesíon, el usuair deberá loguearse 
