@@ -6,19 +6,6 @@
  *
  * @author darkredz
  */
- /*Fechas
-  * 1 para reinscripcion
-         * 2 periodo vacacional
-         * 3 suspension de labores
-         * 4 inicio de cuatrimestre
-         * 5 Semana de baja de materias
-         * 6  1evaluacion docente
-         * 7  2evaluacion docente
-         * 8 recuperacion de unidades
-         * 9 entrega de actas finales
-         * 10 cierre de cuatrimestre
-         * 0 cualquier otra fecha de recordatorio
-         * */
 class AlumnoController extends DooController {
 
     public function home() {
@@ -28,18 +15,9 @@ class AlumnoController extends DooController {
             //informacion del alumno
             Doo::loadModel('Usuario');
             Doo::loadModel('Alumno');
-            //cargamos el periodo activo;
-            Doo::loadModel('Periodo');
-            Doo::loadModel('Fecha');
             $usuario= new Usuario();
             $usuario->idusuario=$session->get('idusuario');
             $usuario = $this->db()->relate($usuario,'Alumno');
-            $periodoactual= new Periodo();
-            $periodoactual->active=1;
-            $periodoactual=$this->db()->relate($periodoactual,'Fecha');
-            echo "<pre>";
-            print_r($periodoactual);
-            echo "</pre>";
             //informacion general de fechas 
             $this->data["usuario"]=$usuario;
             //documentos de profesores, o para alumnos
