@@ -1,4 +1,5 @@
 <?php
+//alumno
 
 ?>
 
@@ -136,6 +137,56 @@
 					
 				</ul>
 			</li>
+                        
+			<li>
+				<a href="index.html" target="_blank">
+					<i class="glyphicon glyphicon-unchecked"></i>
+					<span>Perfil Academico</span>
+				</a>
+                            <ul>
+                                    <li>
+						<a href="layout-api.html">
+							<span>Materias por cursar</span>
+						</a>
+					</li>
+                                    <li>
+						<a href="dashboard-3.html">
+							<span>Materias en Curso</span>
+						</a>
+					</li>
+					
+					
+					
+				</ul>
+			</li>
+                        <li>
+				<a href="index.html" target="_blank">
+					<i class="glyphicon glyphicon-paperclip"></i>
+					<span>Materia1</span>
+				</a>
+                            <ul>
+                                    <li>
+						<a href="layout-api.html">
+							<span>Actividades</span>
+						</a>
+					</li>
+                                    <li>
+						<a href="dashboard-3.html">
+							<span>Evaluaciones</span>
+						</a>
+					</li>
+                                         <li>
+						<a href="dashboard-3.html">
+							<span>Asistencias</span>
+						</a>
+					</li>
+					
+					
+					
+				</ul>
+			</li>
+                   
+
 			<li>
 				<a href="index.html" target="_blank">
 					<i class="glyphicon glyphicon-lock"></i>
@@ -163,7 +214,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="#">
+				<a href="<?php echo Doo::conf()->APP_URL; ?>salir">
 					<i class="glyphicon glyphicon-log-out"></i>
 					<span>Salir</span>
 				</a>

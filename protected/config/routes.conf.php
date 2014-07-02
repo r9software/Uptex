@@ -55,6 +55,7 @@
  */
  
 $route['*']['/'] = array('MainController', 'index');
+$route['*']['/salir'] = array('MainController', 'salir');
 $route['post']['/login'] = array('LoginController', 'validarLogin');
 //administradores
 $route['*']['/administrativo/home'] = array('administrativo/AdministrativoController', 'home');

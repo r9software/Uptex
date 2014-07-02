@@ -31,6 +31,14 @@ class MainController extends DooController {
             $this->renderc("index");
         }
     }
+    public function salir() {
+        //Cargamos la posible sesión existente	
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        $session->destroy();
+        $this->renderc("index");
+        
+    }
+
 
     public function green() {
         $this->renderc("saup/green");
