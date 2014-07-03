@@ -17,10 +17,14 @@ class GrupomateriahorarioBase extends DooModel{
      * @var int Max length is 11.
      */
     public $idhorario;
+    /**
+     * @var int Max length is 11.
+     */
+    public $idcarrera;
 
     public $_table = 'grupomateriahorario';
     public $_primarykey = 'idhorario';
-    public $_fields = array('idmateria','idgrupo','idhorario');
+    public $_fields = array('idmateria','idgrupo','idhorario','idcarrera');
 
     public function getVRules() {
         return array(
@@ -37,6 +41,11 @@ class GrupomateriahorarioBase extends DooModel{
                 ),
 
                 'idhorario' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'notnull' ),
+                ),
+             'idcarrera' => array(
                         array( 'integer' ),
                         array( 'maxlength', 11 ),
                         array( 'notnull' ),

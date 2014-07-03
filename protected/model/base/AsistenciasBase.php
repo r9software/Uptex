@@ -41,7 +41,7 @@ class AsistenciasBase extends DooModel{
     public $_table = 'asistencias';
     public $_primarykey = 'idperiodo';
     public $_fields = array('idalumno','idmaestro','idmateria','idgrupo','fecha','asistencia','idperiodo');
-
+   
     public function getVRules() {
         return array(
                 'idalumno' => array(

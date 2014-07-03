@@ -24,7 +24,14 @@ class FechaBase extends DooModel {
      * @var int Max length is 11.
      */
     public $idperiodo;
+    /**
+     * @var int Max length is 11.
+     */
     public $tipodefecha;
+    /**
+     * @var int Max length is 11.
+     */
+     public $idcarrera;
     /* 1 para reinscripcion
      * 2 periodo vacacional
      * 3 suspension de labores
@@ -39,7 +46,7 @@ class FechaBase extends DooModel {
      * */
     public $_table = 'fecha';
     public $_primarykey = 'idfechas';
-    public $_fields = array('idfechas', 'fechaini', 'fechafin', 'descripcion', 'idperiodo', 'tipodefecha');
+    public $_fields = array('idfechas', 'fechaini', 'fechafin', 'descripcion', 'idperiodo', 'tipodefecha','idcarrera');
 
     public function getVRules() {
         return array(
@@ -60,6 +67,10 @@ class FechaBase extends DooModel {
                 array('optional'),
             ),
             'idperiodo' => array(
+                array('integer'),
+                array('maxlength', 11),
+                array('notnull'),
+            ), 'idcarrera' => array(
                 array('integer'),
                 array('maxlength', 11),
                 array('notnull'),
