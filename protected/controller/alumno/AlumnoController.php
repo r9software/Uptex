@@ -94,7 +94,7 @@ class AlumnoController extends DooController {
             print_r(" ".($valor*100)."%");
             echo "</pre>";*/
             $this->data["inasistencias"]=$valorinasistencias;
-            $this->data["porcentajeinasistencias"]=$valorinasistencias;
+            $this->data["porcentajeinasistencias"]=$valor;
             
             
             
