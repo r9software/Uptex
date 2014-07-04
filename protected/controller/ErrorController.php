@@ -8,6 +8,7 @@
 class ErrorController extends DooController{
 
     public function index(){
+       
         $this->renderc("error");
     }
 	

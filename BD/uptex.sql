@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 02-07-2014 a las 19:03:27
--- Versión del servidor: 5.6.17
--- Versión de PHP: 5.5.12
+-- Servidor: localhost:3306
+-- Tiempo de generación: 03-07-2014 a las 20:46:51
+-- Versión del servidor: 5.5.37
+-- Versión de PHP: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `uptex`
+-- Base de datos: `saupedum_uptex`
 --
 
 -- --------------------------------------------------------
@@ -121,8 +121,17 @@ INSERT INTO `alumno` (`idalumno`, `nombre`, `direccion`, `municipio`, `estado`, 
 CREATE TABLE IF NOT EXISTS `alumnocarrera` (
   `idalumno` int(11) NOT NULL,
   `idcarrera` int(11) NOT NULL,
+  `fechaini` date NOT NULL,
+  `fechafin` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`idalumno`,`idcarrera`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `alumnocarrera`
+--
+
+INSERT INTO `alumnocarrera` (`idalumno`, `idcarrera`, `fechaini`, `fechafin`) VALUES
+(1, 1, '2013-11-01', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -153,6 +162,16 @@ CREATE TABLE IF NOT EXISTS `asistencias` (
   PRIMARY KEY (`idalumno`,`idmaestro`,`idmateria`,`idgrupo`,`fecha`,`idperiodo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `asistencias`
+--
+
+INSERT INTO `asistencias` (`idalumno`, `idmaestro`, `idmateria`, `idgrupo`, `fecha`, `asistencia`, `idperiodo`) VALUES
+(1, 1, 1, 1, '2014-07-01', 1, 1),
+(1, 1, 1, 1, '2014-07-10', 0, 1),
+(1, 1, 1, 1, '2014-07-16', 0, 1),
+(1, 1, 1, 1, '2014-07-31', 0, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -180,10 +199,19 @@ CREATE TABLE IF NOT EXISTS `cambioshistorial` (
 --
 
 CREATE TABLE IF NOT EXISTS `carrera` (
-  `idcarrera` int(11) NOT NULL,
+  `idcarrera` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idcarrera`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `carrera`
+--
+
+INSERT INTO `carrera` (`idcarrera`, `nombre`) VALUES
+(1, 'Ingenier&iacute;a en electr&oacute;nica y tel'),
+(2, 'Ingenier&iacute;a robotica'),
+(3, 'Licenciatura en gesti&oacute;n de PyMES');
 
 -- --------------------------------------------------------
 
@@ -272,9 +300,12 @@ CREATE TABLE IF NOT EXISTS `excepcionpago` (
 
 CREATE TABLE IF NOT EXISTS `fecha` (
   `idfechas` int(11) NOT NULL AUTO_INCREMENT,
-  `fecha` date DEFAULT NULL,
+  `fechaini` date DEFAULT NULL,
+  `fechafin` date NOT NULL,
   `descripcion` varchar(200) DEFAULT NULL,
   `idperiodo` int(11) NOT NULL,
+  `tipodefecha` int(11) NOT NULL DEFAULT '0',
+  `idcarrera` int(11) NOT NULL,
   PRIMARY KEY (`idfechas`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -282,10 +313,10 @@ CREATE TABLE IF NOT EXISTS `fecha` (
 -- Volcado de datos para la tabla `fecha`
 --
 
-INSERT INTO `fecha` (`idfechas`, `fecha`, `descripcion`, `idperiodo`) VALUES
-(1, '2014-06-28', 'Inicio de Cuatrimestre Sep Dic 2014', 1),
-(2, '2014-06-28', 'Reinscripción May Ago 2014 Ingeniería  Robótica y Nuevo Ingreso', 1),
-(3, '2014-06-28', 'Reinscripción May Ago 2014 Ingeniería en Electrónica y Telecomunicaciones', 1);
+INSERT INTO `fecha` (`idfechas`, `fechaini`, `fechafin`, `descripcion`, `idperiodo`, `tipodefecha`, `idcarrera`) VALUES
+(1, '2014-07-09', '2014-07-09', 'Inicio de Cuatrimestre Sep Dic 2014', 1, 4, 1),
+(2, '2014-07-09', '2014-07-09', 'Reinscripción May Ago 2014 Ingeniería  Robótica y Nuevo Ingreso', 1, 1, 2),
+(3, '2014-07-09', '2014-07-09', 'Reinscripción May Ago 2014 Ingeniería en Electrónica y Telecomunicaciones', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -311,6 +342,7 @@ CREATE TABLE IF NOT EXISTS `grupomateriahorario` (
   `idmateria` int(11) NOT NULL,
   `idgrupo` int(11) NOT NULL,
   `idhorario` int(11) NOT NULL,
+  `idcarrera` int(11) NOT NULL,
   PRIMARY KEY (`idmateria`,`idgrupo`,`idhorario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -494,15 +526,17 @@ CREATE TABLE IF NOT EXISTS `periodo` (
   `idperiodo` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
   `clave` varchar(10) NOT NULL,
+  `active` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idperiodo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `periodo`
 --
 
-INSERT INTO `periodo` (`idperiodo`, `nombre`, `clave`) VALUES
-(1, 'Periodo Septiembre-Diciembre', '201403');
+INSERT INTO `periodo` (`idperiodo`, `nombre`, `clave`, `active`) VALUES
+(1, 'Periodo Septiembre-Diciembre', '201403', 1),
+(3, 'Periodo 2014-2', '201402', 0);
 
 -- --------------------------------------------------------
 

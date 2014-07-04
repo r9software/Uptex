@@ -36,7 +36,7 @@
     </head>
     <body class="page-body  page-fade boxed-layout" data-url="http://neon.dev">
 
-        <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
+        <div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
             <div class="main-content" style="min-height: 1701px;">
                 <div class="page-error-404">
 
