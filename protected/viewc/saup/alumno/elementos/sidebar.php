@@ -167,7 +167,7 @@
 
                 </li>
                 <li>
-                    <a href="skin-black.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/calendario">
                         <span>Calendario</span>
                     </a>
 

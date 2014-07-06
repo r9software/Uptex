@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="<?php echo Doo::conf()->APP_URL; ?>global/css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo Doo::conf()->APP_URL; ?>global/css/neon-core.css">
 	<link rel="stylesheet" href="<?php echo Doo::conf()->APP_URL; ?>global/css/neon-theme.css">
-	<link rel="stylesheet" href="<?php echo Doo::conf()->APP_URL; ?>global/css/neon-forms.css">
 	<link rel="stylesheet" href="<?php echo Doo::conf()->APP_URL; ?>global/css/custom.css">
 
 	<script src="<?php echo Doo::conf()->APP_URL; ?>global/js/jquery-1.11.0.min.js"></script>
@@ -34,3 +33,7 @@
 	
 	
 </head>
+<body class="page-body  page-fade boxed-layout" data-url="http://neon.dev">
+
+    <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
+        

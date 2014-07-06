@@ -43,7 +43,10 @@ var neonCalendar = neonCalendar || {};
 			
 			
 			// Setup Calendar
-			if($.isFunction($.fn.fullCalendar))
+		/**
+                 * 
+                 * 	
+                if($.isFunction($.fn.fullCalendar))
 			{
 				var calendar = $('#calendar');
 				
@@ -89,6 +92,8 @@ var neonCalendar = neonCalendar || {};
 				alert("Please include full-calendar script!");
 			}
 				
+                 * 
+                 * */
 			
 			$("body").on('submit', '#add_event_form', function(ev)
 			{

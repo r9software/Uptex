@@ -58,13 +58,16 @@ $route['*']['/'] = array('MainController', 'index');
 $route['*']['/salir'] = array('MainController', 'salir');
 $route['post']['/login'] = array('LoginController', 'validarLogin');
 //administradores
-$route['*']['/administrativo/home'] = array('administrativo/AdministrativoController', 'home');
+$route['*']['/administrativo/'] = array('administrativo/AdministrativoController', 'home');
 
 //maestro
-$route['*']['/maestro/home'] = array('maestro/MaestroController', 'home');
+$route['*']['/maestro/'] = array('maestro/MaestroController', 'home');
 //alumnos
 $route['*']['/alumno/home'] = array('alumno/AlumnoController', 'home');
-
+$route['*']['/alumno/calendario'] = array('alumno/AlumnoController', 'calendario');
+/*apiCalendario no se uso
+$route['get']['/api/calendario'] = array('api/ApiController', 'calendario');
+*/
 $route['*']['/green'] = array('MainController', 'green');
 $route['*']['/yellow'] = array('MainController', 'yellow');
 $route['*']['/black'] = array('MainController', 'black');
