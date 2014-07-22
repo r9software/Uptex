@@ -6,7 +6,7 @@
 
         <!-- logo -->
         <div class="logo">
-            <a href="index.html">
+            <a href="<?php echo Doo::conf()->APP_URL; ?>">
                 <img src="<?php echo Doo::conf()->APP_URL; ?>global/images/logo@2x.png" width="120" alt="" />
             </a>
         </div>
@@ -41,18 +41,18 @@
         <!-- Search Bar -->
 
         <li class="active opened active">
-            <a href="index.html">
+            <a href="<?php echo Doo::conf()->APP_URL; ?>">
                 <i class="glyphicon glyphicon-home"></i>
                 <span>Perfil</span>
             </a>
             <ul>
                 <li class="active">
-                    <a href="index.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/informacion/">
                         <span>Informacion Personal</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard-2.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/kardex/">
                         <span>Informacion Academica</span>
                     </a>
                 </li>
@@ -60,34 +60,34 @@
             </ul>
         </li>
         <li>
-            <a href="layout-api.html">
+            <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/carrera">
                 <i class="glyphicon glyphicon-book"></i>
                 <span>Carrera</span>
             </a>
             <ul>
                 <li>
-                    <a href="layout-api.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/carrerainfo">
                         <span>Informaci&oacute;n de la carrera</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard-3.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/calificaciones">
                         <span>Calificaciones del semestre</span>
                     </a>
                 </li>
                 <li>
-                    <a href="skin-black.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/horario">
                         <span>Horario</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="highlights.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/evaluacionmaestro">
                         <span>Evaluaci&oacute;n del maestro</span>
                     </a>
                 </li>
                 <li>
-                    <a href="highlights.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/kardex">
                         <span>Historial</span>
                     </a>
                 </li>
@@ -96,18 +96,18 @@
         </li>
 
         <li>
-            <a href="index.html" target="_blank">
+            <a href="#" target="_blank">
                 <i class="glyphicon glyphicon-unchecked"></i>
                 <span>Perfil Academico</span>
             </a>
             <ul>
                 <li>
-                    <a href="layout-api.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materiasrestantes">
                         <span>Materias por cursar</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard-3.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias">
                         <span>Materias en Curso</span>
                     </a>
                 </li>
@@ -117,23 +117,49 @@
             </ul>
         </li>
         <li>
-            <a href="index.html" target="_blank">
+            <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias" target="_blank">
                 <i class="glyphicon glyphicon-paperclip"></i>
-                <span>Materia1</span>
+                <span>Desarrollo de software</span>
             </a>
             <ul>
                 <li>
-                    <a href="layout-api.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias/actividades">
                         <span>Actividades</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard-3.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias/evaluaciones">
                         <span>Evaluaciones</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard-3.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias/asistencias">
+                        <span>Asistencias</span>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </li>
+        <li>
+            <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias" target="_blank">
+                <i class="glyphicon glyphicon-paperclip"></i>
+                <span>Analisis de Algoritmos</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias/actividades">
+                        <span>Actividades</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias/evaluaciones">
+                        <span>Evaluaciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/materias/asistencias">
                         <span>Asistencias</span>
                     </a>
                 </li>
@@ -143,25 +169,24 @@
             </ul>
         </li>
 
-
         <li>
-            <a href="index.html" target="_blank">
+            <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/control" target="_blank">
                 <i class="glyphicon glyphicon-lock"></i>
                 <span>Control Escolar</span>
             </a>
             <ul>
                 <li>
-                    <a href="layout-api.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/control/estancias" >
                         <span>Estancias</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard-3.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/control/comprobantes" >
                         <span>Comprobante de estudios</span>
                     </a>
                 </li>
                 <li>
-                    <a href="skin-black.html">
+                    <a href="<?php echo Doo::conf()->APP_URL; ?>alumno/control/boleta" >
                         <span>Boleta global</span>
                     </a>
 

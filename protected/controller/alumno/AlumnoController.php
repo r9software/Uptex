@@ -20,7 +20,8 @@
  * 0 cualquier otra fecha de recordatorio
  * */
 class AlumnoController extends DooController {
-    public function index(){
+
+    public function index() {
         $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
         if ($session->get('idusuario') != null) {
             //Ya existe una sesión activa, no pediremos que se logue
@@ -84,16 +85,18 @@ class AlumnoController extends DooController {
             $fechasporperiodo->idcarrera = $alumnocarrera->idcarrera;
             //cargamos las fechas por periodo para la carrera
             $fechasporperiodo = $this->db()->relate($periodo, $fechasporperiodo, array("asc" => "tipodefecha", "where" => " fechaini >= CURDATE() AND fechaini <= DATE_ADD(CURDATE(), INTERVAL 15 DAY)"));
-            $fecha= array();
-            foreach ($fechasporperiodo as $fechayperiodo) {
-                foreach ($fechayperiodo as $key => $fechaconperiodo) {
-                        if(strcmp($key,"Fecha")==0){
+            $fecha = array();
+            if (!empty($fechasporperiodo)) {
+                foreach ($fechasporperiodo as $fechayperiodo) {
+                    foreach ($fechayperiodo as $key => $fechaconperiodo) {
+                        if (strcmp($key, "Fecha") == 0) {
                             array_push($fecha, $fechaconperiodo);
                         }
+                    }
                 }
             }
-            if(!empty($fecha)){
-            $this->data["fecha"] = $fecha;
+            if (!empty($fecha)) {
+                $this->data["fecha"] = $fecha;
             }
             //informacion general de fechas 
             $this->data["usuario"] = $usuario;
@@ -138,6 +141,7 @@ class AlumnoController extends DooController {
             $this->renderc("index");
         }
     }
+
     public function calendario() {
         //Cargamos la posible sesión existente	
         $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
@@ -177,20 +181,20 @@ class AlumnoController extends DooController {
             $fechasporperiodo->idcarrera = $alumnocarrera->idcarrera;
             //cargamos las fechas por periodo para la carrera
             $fechasporperiodo = $this->db()->relate($periodo, $fechasporperiodo);
-            $fecha= array();
+            $fecha = array();
             foreach ($fechasporperiodo as $fechayperiodo) {
                 foreach ($fechayperiodo as $key => $fechaconperiodo) {
-                        if(strcmp($key,"Fecha")==0){
-                            array_push($fecha, $fechaconperiodo);
-                        }
+                    if (strcmp($key, "Fecha") == 0) {
+                        array_push($fecha, $fechaconperiodo);
+                    }
                 }
             }
-            if(!empty($fecha)){
-            $this->data["fecha"] = $fecha;
+            if (!empty($fecha)) {
+                $this->data["fecha"] = $fecha;
             }
             //informacion general de fechas 
             $this->data["usuario"] = $usuario;
-            
+
             $this->renderc("saup/alumno/calendario", $this->data);
         } else {
             $session->destroy();
@@ -198,7 +202,166 @@ class AlumnoController extends DooController {
             $this->renderc("index");
         }
     }
-
+    public function informacion() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/informacion");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+     public function kardex() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/kardex");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function carrera() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/carrera");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function carrerainfo() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/carrerainfo");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+     public function calificaciones() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/calificaciones");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+     public function horario() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/horario");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+     }
+      public function evaluacionmaestro() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/evaluacionmaestro");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function materiasrestantes() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/materiasrestantes");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+     public function materias() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/materias");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function materiasactividades() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/materiasactividades");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function materiasevaluaciones() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/materiasevaluaciones");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function materiasasistencias() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/materiasasistencias");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function control() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/control");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function estancias() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/estancias");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function comprobantes() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/comprobantes");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
+    public function boleta() {
+        $session = Doo::session(Doo::conf()->NOMBRE, "usuario");
+        if ($session->get('idusuario') != null) {
+             $this->renderc("saup/alumno/boleta");
+        } else {
+            $session->destroy();
+            //No existe sesíon, el usuair deberá loguearse 
+            $this->renderc("index");
+        }
+    }
 }
 
 ?>

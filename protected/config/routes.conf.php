@@ -64,6 +64,22 @@ $route['*']['/administrativo/'] = array('administrativo/AdministrativoController
 $route['*']['/maestro/'] = array('maestro/MaestroController', 'home');
 //alumnos
 $route['*']['/alumno/home'] = array('alumno/AlumnoController', 'home');
+$route['*']['/alumno/informacion'] = array('alumno/AlumnoController', 'informacion');
+$route['*']['/alumno/kardex'] = array('alumno/AlumnoController', 'kardex');
+$route['*']['/alumno/carrera'] = array('alumno/AlumnoController', 'carrera');
+$route['*']['/alumno/carrerainfo'] = array('alumno/AlumnoController', 'carrerainfo');
+$route['*']['/alumno/calificaciones'] = array('alumno/AlumnoController', 'calificaciones');
+$route['*']['/alumno/horario'] = array('alumno/AlumnoController', 'horario');
+$route['*']['/alumno/evaluacionmaestro'] = array('alumno/AlumnoController', 'evaluacionmaestro');
+$route['*']['/alumno/materiasrestantes'] = array('alumno/AlumnoController', 'materiasrestantes');
+$route['*']['/alumno/materias'] = array('alumno/AlumnoController', 'materias');
+$route['*']['/alumno/materias/actividades'] = array('alumno/AlumnoController', 'materiasactividades');
+$route['*']['/alumno/materias/evaluaciones'] = array('alumno/AlumnoController', 'materiasevaluaciones');
+$route['*']['/alumno/materias/asistencias'] = array('alumno/AlumnoController', 'materiasasistencias');
+$route['*']['/alumno/control'] = array('alumno/AlumnoController', 'control');
+$route['*']['/alumno/control/estancias'] = array('alumno/AlumnoController', 'estancias');
+$route['*']['/alumno/control/comprobantes'] = array('alumno/AlumnoController', 'comprobantes');
+$route['*']['/alumno/control/boleta'] = array('alumno/AlumnoController', 'boleta');
 $route['*']['/alumno/calendario'] = array('alumno/AlumnoController', 'calendario');
 /*apiCalendario no se uso
 $route['get']['/api/calendario'] = array('api/ApiController', 'calendario');
