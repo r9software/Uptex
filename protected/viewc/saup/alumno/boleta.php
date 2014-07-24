@@ -5,7 +5,9 @@ include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/alumno/elementos/sidebar
 ?>
 
 
-<div class="main-content"></div>
+<div class="main-content">
+    
+</div>
 
 <?php
 //alumno

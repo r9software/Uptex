@@ -61,9 +61,10 @@ include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/alumno/elementos/sidebar
     <footer class="main">
 
 
-        &copy; 2014 <strong>Neon</strong> Admin Theme by <a href="http://laborator.co" target="_blank">Laborator</a>
+        &copy; 2014 <strong>Saup</strong>  
 
-    </footer>	</div>
+    </footer>	
+</div>
 
 
 
