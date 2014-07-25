@@ -4212,7 +4212,7 @@ hr + .calendar-env {
   background: #ffa416;
 }
 .calendar-env .calendar-body {
-  width: 78%;
+  width: 100%;
   float: right;
 }
 .calendar-env .calendar-body .fc-header {
