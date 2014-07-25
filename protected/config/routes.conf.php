@@ -58,10 +58,10 @@ $route['*']['/'] = array('MainController', 'index');
 $route['*']['/salir'] = array('MainController', 'salir');
 $route['post']['/login'] = array('LoginController', 'validarLogin');
 //administradores
-$route['*']['/administrativo/'] = array('administrativo/AdministrativoController', 'home');
+$route['*']['/administrativo/home'] = array('administrativo/AdministrativoController', 'home');
 
 //maestro
-$route['*']['/maestro/'] = array('maestro/MaestroController', 'home');
+$route['*']['/maestro/home'] = array('maestro/MaestroController', 'home');
 //alumnos
 $route['*']['/alumno/home'] = array('alumno/AlumnoController', 'home');
 $route['*']['/alumno/informacion'] = array('alumno/AlumnoController', 'informacion');
