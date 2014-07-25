@@ -4,8 +4,41 @@ include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/alumno/elementos/headerh
 include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/alumno/elementos/sidebar.php');
 ?>
 
+<div class="main-content">
+    <div class="row">
+        <div class="col-sm-6">
 
-<div class="main-content"></div>
+            <div class="tile-title tile-black">
+
+                <div class="icon">
+                    <i class="glyphicon glyphicon-user"></i>
+                </div>
+
+                <div class="title">
+                    <h3>Comprobante de estudios.</h3>
+                    <p>Esta informacion es confidencial.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Solicita tu comprobante</h1>
+            <div class="panel panel-primary">
+
+                <div class="panel-body">
+                    <br />
+                    <input type="submit" value="Solicitar">
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <?php
 //alumno
