@@ -1,88 +1,10 @@
 <?php 
 include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/maestro/elementos/headerhome.php');
-include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/maestro/elementos/sidebar.php');?>
- <div class="main-content">
+include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/maestro/elementos/sidebar.php');
+?>
 
-                <?php
-                ?>
-                <div class="row">
-
-                    <!-- Profile Info and Notifications -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-
-                        <ul class="user-info pull-left pull-none-xsm">
-
-                            <!-- Profile Info -->
-                            <li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
-
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<?php echo Doo::conf()->APP_URL; ?>global/images/avatar/<?php //echo $maestro->foto;    ?>" alt="" class="img-circle" width="120" />
-                                    <?php // echo $maestro->nombre; ?>
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-
-
-                    </div>
-
-
-                    <!-- Raw Links -->
-
-
-                </div>
-
-                <hr />
-
-
-                <div class="row">
-                    <div class="col-sm-3">
-
-                        <div class="tile-stats tile-red">
-                            <div class="icon"><i class="entypo-users"></i></div>
-                            <div class="num" data-start="0" data-end="25" data-postfix="" data-duration="1500" data-delay="0">0</div>
-
-                            <h3>Clases por semana</h3>
-                            <p>Tienes que dar 4 clases hoy</p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-sm-3">
-
-                        <div class="tile-stats tile-green">
-                            <div class="icon"><i class="entypo-chart-bar"></i></div>
-                            <div class="num" data-start="0" data-end="45" data-postfix="" data-duration="1500" data-delay="600">0</div>
-
-                            <h3>Tareas Entregadas</h3>
-                            <p>El 70% de tus alumnos han entregado su tarea</p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-sm-3">
-
-                        <div class="tile-stats tile-aqua">
-                            <div class="icon"><i class="entypo-mail"></i></div>
-                            <div class="num" data-start="0" data-end="23" data-postfix="" data-duration="1500" data-delay="1200">0</div>
-
-                            <h3>Inasistencias</h3>
-                            <p>5% de inasistencias en este mes.</p>
-                        </div>
-
-                    </div>
-
-                   
-                </div>
-
-                <br />
-
-
-                <br />
-
-                <div class="row">
+<div class="main-content">
+    <div class="row">
 
 
 
@@ -163,16 +85,7 @@ include (Doo::conf()->SITE_PATH . 'protected/viewc/saup/maestro/elementos/sideba
                     </div>
 
                 </div>
-
-                <br />
-
-                <!-- Footer -->
-                <footer class="main">
-
-
-                    &copy; 2014 <strong>Uptex</strong></a>
-
-                </footer>	</div>
+</div>
 
 <?php
 //maestro

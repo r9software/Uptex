@@ -115,7 +115,7 @@ toastr.warning("Lamentablemente tu perfil esta deshabilitado, o no tienes un per
 							<i class="entypo-user"></i>
 						</div>
 						
-						<input type="text" class="form-control" name="usuario" data-validate="email" id="username" placeholder="Usuario" autocomplete="off" />
+						<input type="text" class="form-control" name="usuario" data-validate="email" id="username" placeholder="Usuario" value="r9software" autocomplete="off" />
 					</div>
 					
 				</div>
@@ -127,7 +127,7 @@ toastr.warning("Lamentablemente tu perfil esta deshabilitado, o no tienes un per
 							<i class="entypo-key"></i>
 						</div>
 						
-                                            <input type="password" class="form-control" name="password" id="password" placeholder="Contrase&ntilde;a" autocomplete="off" />
+                                            <input type="password" class="form-control" name="password" id="password" value="a" placeholder="Contrase&ntilde;a" autocomplete="off" />
 					</div>
 				
 				</div>

@@ -62,6 +62,24 @@ $route['*']['/administrativo/home'] = array('administrativo/AdministrativoContro
 
 //maestro
 $route['*']['/maestro/home'] = array('maestro/MaestroController', 'home');
+$route['*']['/maestro/info'] = array('maestro/MaestroController', 'info');
+$route['*']['/maestro/infoacademica'] = array('maestro/MaestroController', 'infoacademica');
+$route['*']['/maestro/materia/planeacion'] = array('maestro/MaestroController', 'materiaplaneacion');
+$route['*']['/maestro/materia/avances'] = array('maestro/MaestroController', 'materiavances');
+$route['*']['/maestro/materia/alumnos'] = array('maestro/MaestroController', 'materiaalumnos');
+$route['*']['/maestro/materia/asistencias'] = array('maestro/MaestroController', 'materiaasistencias');
+$route['*']['/maestro/materia/evidencias'] = array('maestro/MaestroController', 'materiaevidencias');
+$route['*']['/maestro/materia/horario'] = array('maestro/MaestroController', 'materiahorario');
+$route['*']['/maestro/materia/documentos'] = array('maestro/MaestroController', 'materiadocumentos');
+$route['*']['/maestro/grupo/documentos'] = array('maestro/MaestroController', 'grupodocumentos');
+$route['*']['/maestro/grupo/horarios'] = array('maestro/MaestroController', 'grupohorarios');
+$route['*']['/maestro/grupo/asistencias'] = array('maestro/MaestroController', 'grupoasistencias');
+$route['*']['/maestro/grupo/evaluaciones'] = array('maestro/MaestroController', 'grupoevaluaciones');
+$route['*']['/maestro/retroalumnos'] = array('maestro/MaestroController', 'retroalumnos');
+$route['*']['/maestro/retroprofesores'] = array('maestro/MaestroController', 'retroprofesores');
+$route['*']['/maestro/estancia/alumnos'] = array('maestro/MaestroController', 'estanciaalumnos');
+$route['*']['/maestro/estancia/estadia'] = array('maestro/MaestroController', 'estadia');
+
 //alumnos
 $route['*']['/alumno/home'] = array('alumno/AlumnoController', 'home');
 $route['*']['/alumno/informacion'] = array('alumno/AlumnoController', 'informacion');

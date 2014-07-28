@@ -39,8 +39,8 @@ $dbmap['Periodo']['has_many']['Fecha'] = array('foreign_key'=>'idperiodo');
 $dbmap['Fecha']['belongs_to']['Periodo'] = array('foreign_key'=>'idperiodo');
 
 
-$dbconfig['dev'] = array('localhost', 'uptex', 'root', 'root', 'mysql', true);
-$dbconfig['prod'] = array('localhost', 'uptex', 'root', 'root', 'mysql', true);
+$dbconfig['dev'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
+$dbconfig['prod'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
 //$dbconfig['dev'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
 //$dbconfig['prod'] = array('localhost', 'uptex', 'root', '', 'mysql', true);
 //$dbconfig['dev'] = array('localhost', 'saupedum_mex', 'saupe_root', '%6yKgz86', 'mysql', true);
